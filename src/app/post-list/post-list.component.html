@@ -1,4 +1,7 @@
-<ul class="list-group">
-  <app-post *ngFor="let post of posts" [post_title]="post.title" [post_content]="post.content"
-          [post_loveIts]="post.loveIts" [post_created_at]="post.created_at"></app-post>
-</ul>
+<div class="row">
+  <div class="col-xs-12">
+    <ul class="list-group">
+      <app-post *ngFor="let post of posts; let i = index" [post_object]="post" [post_id]="i"></app-post>
+    </ul>
+  </div>
+</div>
